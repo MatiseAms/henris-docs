@@ -15,14 +15,12 @@ Tests will check the main functionalities of the package. Install the package lo
 ```bash
 $ npm run test
 ```
-
-## And coding style tests
 All code is beautified using [Prettier](https://prettier.io/)
 
 ## Deployment
-```warning
+::: danger
 TODO: Add additional notes about how to deploy this on a live system
-```
+:::
 
 ## Browser Support
 Henri's lma uses autoprefixer to make (most) Flexbox features compatible with earlier browser versions. According to Can I use, Henri's is compatible with recent versions of:
