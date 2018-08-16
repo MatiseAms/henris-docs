@@ -106,9 +106,11 @@ function resolveOpenGroupIndex (route, items) {
 	}
 	.sidebar-links{
 		padding: 1.5rem 0;
+		display: flex;
+		flex-direction: column;
 	}
 }
-@media (max-width: $MQMobile){
+@media #{$small-only}{
 	.sidebar{
 		.nav-links{
 			display: block;
