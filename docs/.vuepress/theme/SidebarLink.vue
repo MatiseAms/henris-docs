@@ -64,6 +64,8 @@ function renderChildren (h, children, path, route, maxDepth, depth = 1) {
 .sidebar .sidebar-sub-headers{
   padding-left: 1rem;
   font-size: 0.95em;
+	display: flex;
+	flex-direction: column;
 }
 a.sidebar-link{
   font-weight: 400;
@@ -81,20 +83,16 @@ a.sidebar-link{
     font-weight: 600;
     color: color(accentColor);
     border-left-color: color(accentColor);
-		& + .sidebar-sub-headers{
-			display: block;
-		}
 	}
-	.sidebar-group &{
-		padding-left: 2rem;
+  .sidebar-group &{
+    padding-left: 2rem;
 	}
-	.sidebar-sub-headers &{
-		padding-top: 0.25rem;
-		padding-bottom: 0.25rem;
-		border-left: none;
-
-		&.active{
-			font-weight: 500;
+  .sidebar-sub-headers &{
+    padding-top: 0.25rem;
+    padding-bottom: 0.25rem;
+    border-left: none;
+    &.active{
+      font-weight: 500;
 		}
 	}
 }
