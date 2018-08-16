@@ -34,6 +34,8 @@ export default {
 </script>
 
 <style lang="scss">
+@import './styles/custom-colors';
+@import '~henris';
 @import './styles/config';
 
 .algolia-search-wrapper{
@@ -59,19 +61,19 @@ export default {
 				margin-top: 0;
 			}
 			.ds-suggestion{
-				border-bottom: 1px solid $borderColor;
+				border-bottom: 1px solid color(borderColor);
 			}
 		}
 		.algolia-docsearch-suggestion--highlight{
 			color: #2c815b;
 		}
 		.algolia-docsearch-suggestion{
-			border-color: $borderColor;
+			border-color:color(borderColor);
 			padding: 0;
 			.algolia-docsearch-suggestion--category-header{
 				padding: 5px 10px;
 				margin-top: 0;
-				background: $accentColor;
+				background:color(accentColor);
 				color: #fff;
 				font-weight: 600;
 				.algolia-docsearch-suggestion--highlight{
@@ -84,12 +86,12 @@ export default {
 			.algolia-docsearch-suggestion--title{
 				font-weight: 600;
 				margin-bottom: 0
-				color: $textColor;
+				color:color(textColor);
 			}
 			.algolia-docsearch-suggestion--subcategory-column{
 				vertical-align: top;
 				padding: 5px 7px 5px 5px;
-				border-color: $borderColor;
+				border-color:color(borderColor);
 				background: #f1f3f5;
 				&:after{
 					display: none;
@@ -100,11 +102,11 @@ export default {
 			}
 		}
 		.algolia-docsearch-footer{
-			border-color: $borderColor;
+			border-color:color(borderColor);
 		}
 		.ds-cursor .algolia-docsearch-suggestion--content{
 			background-color: #e7edf3 !important;
-			color: $textColor;
+			color:color(textColor);
 		}
 	}
 }

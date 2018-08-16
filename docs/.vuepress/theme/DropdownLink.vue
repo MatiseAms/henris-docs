@@ -51,6 +51,8 @@ export default {
 </script>
 
 <style lang="scss">
+@import './styles/custom-colors';
+@import '~henris';
 @import './styles/config';
 
 .dropdown-wrapper{
@@ -91,15 +93,15 @@ export default {
 				margin-bottom: 0;
 				padding: 0 1.5rem 0 1.25rem;
 				&:hover{
-					color: $accentColor;
+					color:color(accentColor);
 				}
 				&.router-link-active{
-					color: $accentColor;
+					color:color(accentColor);
 					&::after{
 						content: "";
 						width: 0;
 						height: 0;
-						border-left: 5px solid $accentColor;
+						border-left: 5px solidcolor(accentColor);
 						border-top: 3px solid transparent;
 						border-bottom: 3px solid transparent;
 						position: absolute;
@@ -153,7 +155,7 @@ export default {
 			// make the arrow always down at desktop
 			border-left: 4px solid transparent;
 			border-right: 4px solid transparent;
-			border-top: 6px solid $arrowBgColor;
+			border-top: 6px solid color(arrowBgColor);
 			border-bottom: 0;
 		}
 		.nav-dropdown{

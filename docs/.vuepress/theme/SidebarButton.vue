@@ -7,7 +7,9 @@
 </template>
 
 <style lang="scss">
+@import '~henris';
 @import './styles/config';
+
 
 .sidebar-button{
 	display: none;

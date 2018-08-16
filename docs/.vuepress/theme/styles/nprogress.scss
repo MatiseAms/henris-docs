@@ -2,7 +2,7 @@
 	pointer-events: none;
 }
 .bar{
-	background: $accentColor;
+	background:color(accentColor);
 	position: fixed;
 	z-index: 1031;
 	top: 0;
@@ -16,7 +16,7 @@
 	right: 0px;
 	width: 100px;
 	height: 100%;
-	box-shadow: 0 0 10px $accentColor, 0 0 5px $accentColor;
+	box-shadow: 0 0 10pxcolor(accentColor), 0 0 5pxcolor(accentColor);
 	opacity: 1.0;
 	transform: rotate(3deg) translate(0px, -4px);
 }
@@ -32,8 +32,8 @@
 	height: 18px;
 	box-sizing: border-box;
 	border: solid 2px transparent;
-	border-top-color: $accentColor;
-	border-left-color: $accentColor;
+	border-top-color:color(accentColor);
+	border-left-color:color(accentColor);
 	border-radius: 50%;
 	animation: nprogress-spinner 400ms linear infinite;
 }

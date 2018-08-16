@@ -3,7 +3,7 @@
 module.exports = {
 	title: "Henri's docs",
 	home: true,
-	description: "Henri's documentation",
+	description: "Documentation for the henri's package.",
 	themeConfig: {
 		logo: '/media/img/henris.svg',
 		repo: "matiseams/henris-docs",

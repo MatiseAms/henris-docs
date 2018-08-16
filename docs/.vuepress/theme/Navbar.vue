@@ -4,7 +4,7 @@
     <router-link :to="$localePath" class="home-link">
       <img class="logo"
         v-if="$site.themeConfig.logo"
-        :src="$withBase($site.themeConfig.logo)">
+        :src="$withBase($site.themeConfig.logo)" alt="Logo Henri's">
     </router-link>
     <div class="links">
       <AlgoliaSearchBox v-if="isAlgoliaSearch" :options="algolia"/>
@@ -34,6 +34,9 @@ export default {
 </script>
 
 <style lang="scss">
+@import './styles/custom-colors';
+@import '~henris';
+
 @import './styles/config';
 
 .navbar{
@@ -52,7 +55,7 @@ export default {
 	.site-name{
 		font-size: 1.3rem;
 		font-weight: 600;
-		color: $textColor;
+		color:color(textColor);
 		position: relative;
 	}
 	.links{

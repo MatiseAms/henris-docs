@@ -57,6 +57,8 @@ function renderChildren (h, children, path, route, maxDepth, depth = 1) {
 </script>
 
 <style lang="scss">
+@import './styles/custom-colors';
+@import '~henris';
 @import './styles/config';
 
 .sidebar .sidebar-sub-headers{
@@ -66,19 +68,19 @@ function renderChildren (h, children, path, route, maxDepth, depth = 1) {
 a.sidebar-link{
   font-weight: 400;
   display: inline-block;
-  color: $textColor;
+  color:color(textColor);
   border-left: 0.25rem solid transparent;
-  padding: 0.35rem 1rem 0.35rem 1.25rem;
+  padding: 0.35rem 1rem 0.35rem 2rem;
   line-height: 1.4;
   width: 100%;
   box-sizing: border-box;
   &:hover{
-    color: $accentColor;
+    color:color(accentColor);
 	}
   &.active{
     font-weight: 600;
-    color: $accentColor;
-    border-left-color: $accentColor;
+    color: color(accentColor);
+    border-left-color: color(accentColor);
 	}
   .sidebar-group &{
     padding-left: 2rem;

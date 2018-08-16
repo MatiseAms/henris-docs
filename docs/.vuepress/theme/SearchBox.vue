@@ -136,6 +136,8 @@ export default {
 </script>
 
 <style lang="scss">
+@import './styles/custom-colors';
+@import '~henris';
 @import './styles/config';
 
 .search-box{
@@ -145,9 +147,9 @@ export default {
 	input{
 		cursor: text;
 		width: 10rem;
-		color: lighten($textColor, 25%);
+		color: lighten(textColor, 25%);
 		display: inline-block;
-		border: 1px solid darken($borderColor, 10%);
+		border: 1px solid color(borderColor, 10%);
 		border-radius: 2rem;
 		font-size: 0.9rem;
 		line-height: 2rem;
@@ -158,7 +160,7 @@ export default {
 		background-size: 1rem;
 		&:focus{
 			cursor: auto;
-			border-color: $accentColor;
+			border-color:color(accentColor);
 		}
 	}
 	.suggestions{
@@ -166,7 +168,7 @@ export default {
 		width: 20rem;
 		position: absolute;
 		top: 1.5rem;
-		border: 1px solid darken($borderColor, 10%);
+		border: 1px solid color(borderColor, 10%);
 		border-radius: 6px;
 		padding: 0.4rem;
 		list-style-type: none;
@@ -180,7 +182,7 @@ export default {
 		border-radius: 4px;
 		cursor: pointer;
 		a{
-			color: lighten($textColor, 35%);
+			color: lighten(textColor, 35%);
 			.page-title{
 				font-weight: 600;
 			}
@@ -191,7 +193,7 @@ export default {
 			&.focused{
 				background-color: #f3f4f5;
 				a{
-					color: $accentColor;
+					color:color(accentColor);
 				}
 			}
 		}

@@ -22,7 +22,7 @@
 			color: darken(#ffe564, 50%);
 		}
 		a{
-			color: $textColor;
+			color:color(textColor);
 		}
 	}
 	&.danger{
@@ -33,7 +33,7 @@
 			color: darken(Red, 40%);
 		}
 		a{
-			color: $textColor;
+			color:color(textColor);
 		}
 	}
 }
