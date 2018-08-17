@@ -1,5 +1,5 @@
 # Grid
-## The filosophy
+## The philosophy
 Making websites responsive shouldn't be such a tedious task, but it is. We try to make things easier, with our Henri's grid. We have a function and classes you can use.
 
 An important thing to mention is that the designers at Matise design on a 24 column grid layout, it's important that designers and developers are on the same page.
