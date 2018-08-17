@@ -30,5 +30,22 @@ Our grid-classes make developing a responsive website even easier, they are base
 The element has to have a `.column` class.
 :::
 
-
 <GridExample />
+
+
+## Settings
+| Variable | Default value | Description |
+|-- |-------------|-- |
+| `$grid-columns` | `24` | Amount of columns |
+| `$grid-design-width`| `1920px` | Base design width. Used for converting rem to grid size and min/max grid | | size
+| `$grid-row-width` | `4096px` | Maximum row width, will be set as max-width for rows. |
+| `$grid-breakpoints` | `small` : 750 <br>`medium` : 960<br> `large` : 1280<br> `xlarge` : 1920<br> `xxlarge` : 9999 | Breakpoints used for the grid. All classes will be automatically generated based on | these names and sizes. Do not add classes, this can break many things, changing values is allowed.
+| `$grid-parts` | 1/1 : `full`<br> 1/2 : `half`<br> 1/3 : `third`<br> 2/3 : `two-third`<br> 1/4 : `quarter`<br> 3/4 : `three-quarter`<br> 1/5 : `fifth`<br> 2/5 : `two-fifth`<br> 3/5 : `three-fifth`<br> 4/5 : `four-fifth`<br> 1/6 : `sixth`<br> 5/6 : `five-sixth`| Extra breakpoints automatically generates percentages. More can be added easily. |
+
+<script>
+export default{
+	mounted(){
+		console.log(this);
+	}
+}
+</script>

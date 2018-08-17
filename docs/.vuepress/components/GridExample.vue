@@ -1,42 +1,59 @@
 <template>
 	<div name="GridExample">
 		<h2>Try the grid</h2>
-		<div class="settings">
-			<p>Grid sizes:</p>
-			<div class="range__container">
-				<div class="range__numbers row">
-					<p>1</p><p>24</p>
-				</div>
-				<div class="input-field input--range">
-					<input class="range__input" type="range" id="try-grid" @input="changeGrid('range')" ref="range" max="24" min="1">
-				</div>
-			</div>
-			<p>Grid parts:</p>
+		<div class="example-grid row bg-black" :class="{'center' : centered}">
+			<div v-for="n in ( 1 * elements )" :class="['column', 'small-'+ columnClass, n, 'grid-element'] "><p>{{ columnClass }}</p></div>
+		</div>
+
+		<div class="settings background--codebgcolor">
+			<h4>Grid parts:</h4>
 			<form class="row grid-parts" action="index.html" method="post">
 				<div class="input-container input-field input--radio" v-for="(gridSize, index) in gridWidths" :key="index">
-					<input type="radio" @input="changeGrid(gridSize.name, gridSize.width)" :id="gridSize.name" :ref="gridSize.name" name="part" :calc="gridSize.width" :value="gridSize.name" class="parts" :checked="checkedInput == index">
+					<input type="radio" v-model="part" :id="gridSize.name" :ref="gridSize.name" name="part" :calc="gridSize.width" :value="gridSize.name" class="parts">
 					<label :for="gridSize.name">
 						{{ gridSize.name }}
 					</label>
 				</div>
 			</form>
+			<h4>Grid sizes:</h4>
+			<div class="range__container">
+				<div class="range__numbers row">
+					<p>1</p><p>24</p>
+				</div>
+				<div class="input-field input--range">
+					<input class="range__input" type="range" id="try-grid" v-model="range" ref="range" max="24" min="1">
+				</div>
+			</div>
 			<div class="column-count input-field">
 				<label for="columnCount">Amount of elements:</label>
-				<input id="columnCount" type="number" name="" @input="changeElements('elements')" :value="elements" ref="elements" min="1">
+				<input id="columnCount" type="number" name="" v-model="elements" ref="elements" min="1">
+			</div>
+			<div class="input-field input--switch">
+				<input type="checkbox" id="center" v-model="centered">
+				<label for="center">Centered</label>
 			</div>
 		</div>
-
-		<div class="example-grid row bg-black">
-			<div v-for="n in ( 1 * elements )" :class="['column', 'small-'+input, n, 'bg-white grid-element'] "><p>{{ input }}</p></div>
+		<h4>Generated code:</h4>
+		<div class="language-html">
+			<pre class="language-html">
+				<code>
+{{ generatedHTML }}
+				</code>
+			</pre>
 		</div>
 	</div>
 </template>
 
 <script>
+
 export default {
 	data(){
 		return{
-			input: 24,
+			generatedHTML: '',
+			columnClass: 24,
+			centered: false,
+			range: 24,
+			part: 'full',
 			columnCount: [],
 			elements: 4,
 			checkedInput: 0,
@@ -79,39 +96,55 @@ export default {
 			}]
 		};
 	},
+	mounted(){
+		this.generateHTML();
+	},
 	methods: {
-		changeGrid: function (el, calc) {
-			let value = this.$refs[el].value;
+		generateHTML: function(sizeClass){
 			let self = this;
-			let count = 0;
-
-
-			if (value == undefined ) {
-				value = el;
-				if (((calc * 24) % 1) == 0){
-					this.$refs.range.value = calc * 24;
-				}
-			} else {
-				this.gridWidths.forEach(function(size) {
-					count++;
-					if (size.width == value / 24) {
-						self.checkedInput = count - 1;
-					} else {
-						self.checkedInput = false;
-					}
-				})
+			let elements = '';
+			let rowClass = ''
+			for(let i = 0; i < this.elements; i++) {
+				elements +=
+`\t<div class="column small-${self.columnClass}"></div>\n`;
+			};
+			if (this.centered){
+				rowClass = ' center'
 			}
+			this.generatedHTML =
+`<div class="row${rowClass}">
+${elements}
+</div>`;
 
-			this.input = value;
-		},
-		changeElements: function (el) {
-			let value = this.$refs[el].value;
-			this.elements = value;
 		}
 	},
 	watch: {
-		checkgrid: function(){
-			console.log('');
+		range: function(){
+			let self = this;
+			self.gridWidths.forEach(function (size) {
+				if((self.range / 24) == size.width) {
+					self.part = size.name;
+				}
+			});
+			self.columnClass = self.range;
+			this.generateHTML();
+		},
+		part: function(){
+			let self = this;
+			self.gridWidths.forEach(function (size) {
+				if(self.part == size.name && ((size.width * 24) % 1) == 0){
+					self.range = (size.width * 24);
+				}
+			});
+			self.columnClass = self.part;
+			console.log(self.columnClass);
+			this.generateHTML();
+		},
+		elements: function(){
+			this.generateHTML();
+		},
+		centered: function(){
+			this.generateHTML();
 		}
 	}
 }
@@ -121,7 +154,6 @@ export default {
 @import '~henris';
 
 .settings{
-	background-color: color(Purple, .3);
 	padding: 2rem;
 }
 
@@ -139,6 +171,10 @@ export default {
 	}
 }
 
+.input-field, .input-field + .input-field {
+	margin-top: .5rem;
+}
+
 .grid-parts{
 	padding: 1rem 0;
 	display: flex;
@@ -149,8 +185,10 @@ export default {
 
 .example-grid {
 	.grid-element{
-		padding: 1rem;
-		box-sizing: border-box;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		padding: .5rem 0;
 		border: color(Black) solid 1px;
 		transition: .4s ease-out;
 	}
