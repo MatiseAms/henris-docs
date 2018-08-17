@@ -1,15 +1,13 @@
 @import './config';
 
-$mobileSidebarWidth: $sidebarWidth * 0.82;
-
 // narrow desktop / iPad
 @media (max-width: $MQNarrow){
 	.sidebar{
 		font-size: 15px;
-		width: $mobileSidebarWidth;
+		width: 100vw;
 	}
 	.page{
-		padding-left: $mobileSidebarWidth;
+		padding-left: 100vw;
 	}
 }
 // wide mobile

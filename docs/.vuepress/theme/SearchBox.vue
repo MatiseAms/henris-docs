@@ -11,9 +11,8 @@
       @keyup.enter="go(focusIndex)"
       @keyup.up="onUp"
       @keyup.down="onDown">
-    <ul class="suggestions"
+    <ul class="suggestions align-left"
       v-if="showSuggestions"
-      :class="{ 'align-right': alignRight }"
       @mouseleave="unfocus">
       <li class="suggestion" v-for="(s, i) in suggestions"
         :class="{ focused: i === focusIndex }"
@@ -83,12 +82,6 @@ export default {
       }
       return res
     },
-    // make suggestions align right: when there are not enough items;
-    alignRight () {
-      const navCount = (this.$site.themeConfig.nav || []).length
-      const repo = this.$site.repo ? 1 : 0
-      return navCount + repo <= 2
-    }
   },
   methods: {
     getPageLocalePath (page) {
@@ -146,11 +139,11 @@ export default {
 	margin-right: 0.5rem;
 	input{
 		cursor: text;
-		width: 10rem;
+		width: 14rem;
 		color: lighten(textColor, 25%);
 		display: inline-block;
 		border: 1px solid color(borderColor, 10%);
-		border-radius: 2rem;
+		border-radius: 6px;
 		font-size: 0.9rem;
 		line-height: 2rem;
 		padding: 0 0.5rem 0 2rem;
@@ -162,18 +155,21 @@ export default {
 			cursor: auto;
 			border-color:color(accentColor);
 		}
+		@media #{$small-only}{
+			width: calc(100vw - 6rem);
+		}
 	}
 	.suggestions{
 		background: #fff;
-		width: 20rem;
+		width: 16rem;
 		position: absolute;
-		top: 1.5rem;
+		top: 2.1rem;
 		border: 1px solid color(borderColor, 10%);
 		border-radius: 6px;
 		padding: 0.4rem;
 		list-style-type: none;
-		&.align-right{
-			right: 0;
+		&.align-left{
+			left: 0;
 		}
 	}
 	.suggestion{
@@ -196,47 +192,6 @@ export default {
 					color:color(accentColor);
 				}
 			}
-		}
-	}
-}
-@media (max-width: $MQNarrow){
-	.search-box{
-		input{
-			cursor: pointer;
-			width: 0;
-			border-color: transparent;
-			position: relative;
-			left: 1rem;
-			&:focus{
-				cursor: text;
-				left: 0;
-				width: 10rem;
-			}
-		}
-	}
-}
-@media (max-width: $MQNarrow) and (min-width: $MQMobile){
-	.search-box{
-		.suggestions{
-			left: 0;
-		}
-	}
-}
-@media (max-width: $MQMobile){
-	.search-box{
-		margin-right: 0;
-		.suggestions{
-			right: 0;
-		}
-	}
-}
-@media (max-width: $MQMobileNarrow){
-	.search-box{
-		.suggestions{
-			width: calc(100vw - 4rem);
-		}
-		input:focus{
-			width: 8rem;
 		}
 	}
 }

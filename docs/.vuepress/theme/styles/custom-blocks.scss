@@ -16,7 +16,7 @@
 	}
 	&.warning{
 		background-color: color(Warning,.3);
-		border-color: darken(Warning, 35%);
+		border-color: color(Warning, .8);
 		color: darken(Warning, 70%);
 		.custom-block-title{
 			color: darken(Warning, 50%);

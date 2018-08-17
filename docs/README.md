@@ -15,7 +15,7 @@ footer: MIT Licensed | Copyright © 2018-present Matise Amsterdam
 ### Quick start
 ```bash
 # install
-$ npm install -g henris # OR yarn global add henris
+$ npm i henris # OR yarn add henris
 ```
 ```scss
 # add to your project
