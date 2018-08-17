@@ -5,6 +5,7 @@
 
 $output: set-output(css, true);
 $output: set-output(reset-extra, true);
+$output: set-output(form-switch, true);
 
 @import "~henris";
 
@@ -27,7 +28,8 @@ body{
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 	font-size: 16px;
-	color:color(textColor);
+	background: transparent;
+	color: color(textColor);
 }
 
 .page{
@@ -40,9 +42,9 @@ body{
 	left: 0;
 	right: 0;
 	height: $navbarHeight;
-	background-color: #000;
+	background-color: #fff;
 	box-sizing: border-box;
-	color: #fff;
+	color: #000;
 }
 .sidebar-mask{
 	position: fixed;
@@ -55,22 +57,21 @@ body{
 }
 .sidebar{
 	font-size: 15px;
-	background-color: #fff;
+	background-color: color(White);
 	width: $sidebarWidth;
 	position: fixed;
 	z-index: 10;
 	margin: 0;
-	top: $navbarHeight;
+	top: 0;
 	left: 0;
 	bottom: 0;
 	box-sizing: border-box;
-	border-right: 1px solid color(borderColor);
 	overflow-y: auto;
 }
 .content:not(.custom){
 	@extend %wrapper;
 	> *:first-child{
-		margin-top: calc(#{$navbarHeight} * 2);
+		margin-top: calc(#{$navbarHeight});
 	}
 	a:hover{
 		text-decoration: underline;

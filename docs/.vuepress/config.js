@@ -13,6 +13,7 @@ module.exports = {
 		editLinkText: "Edit this page on GitHub",
 		nav: [{ text: "Matise", link: "https://www.matise.nl" }],
 		sidebar: [
+			["/introduction/", "Introduction"],
 			["/getting-started/", "Getting started"],
 			["/typography/", "Typography"],
 			["/color/", "Color"],
