@@ -4,6 +4,9 @@ module.exports = {
 	title: "Henri's docs",
 	home: true,
 	description: "Documentation for the henri's package.",
+	head: [
+		['link', { rel: 'icon', href: `/media/img/favicon.png` }],
+	],
 	themeConfig: {
 		logo: '/media/img/henris.svg',
 		repo: "matiseams/henris-docs",
