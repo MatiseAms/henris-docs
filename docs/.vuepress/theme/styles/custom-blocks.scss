@@ -11,26 +11,26 @@
 		margin: 1rem 0;
 	}
 	&.tip{
-		background-color: color(Tip, .2);
-		border-color: color(Tip);
+		background-color: rgba($color-success, .2);
+		border-color: color($color-success);
 	}
 	&.warning{
-		background-color: color(Warning,.3);
-		border-color: color(Warning, .8);
-		color: darken(Warning, 70%);
+		background-color: rgba($color-warning, .3);
+		border-color: rgba($color-warning, .8);
+		color: darken($color-warning, 70%);
 		.custom-block-title{
-			color: darken(Warning, 50%);
+			color: darken($color-warning, 50%);
 		}
 		a{
 			color:color(textColor);
 		}
 	}
 	&.danger{
-		background-color: color(Danger, .2);
-		border-color: darken(Danger, 20%);
-		color: darken(Danger, 70%);
+		background-color: rgba($color-danger, .2);
+		border-color: darken($color-danger, 20%);
+		color: darken($color-danger, 70%);
 		.custom-block-title{
-			color: darken(Danger, 40%);
+			color: darken($color-danger, 40%);
 		}
 		a{
 			color:color(textColor);
