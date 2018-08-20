@@ -18,10 +18,12 @@
 
 <script>
 import outputData from "henris/data/output.json";
+
 export default {
 	data() {
 		return {
-			outputs: {}
+			outputs: {},
+			settings: {}
 		};
 	},
 	created() {

@@ -8,7 +8,6 @@ module.exports = {
 		['link', { rel: 'icon', href: `/media/img/favicon.png` }],
 	],
 	themeConfig: {
-		logo: '/media/img/henris.svg',
 		repo: "matiseams/henris-docs",
 		editLinks: true,
 		docsDir: "docs",
@@ -21,13 +20,14 @@ module.exports = {
 			["/typography/", "Typography"],
 			["/color/", "Color"],
 			["/grid/", "Grid"],
-			["/output/", "Output"]
+			["/output/", "Output"],
+			["/functions/", "Functions"]
 		]
 	},
 	configureWebpack: {
 		resolve: {
 			alias: {
-				"@media-img": "media/img/"
+				"@media-json": "media/json/"
 			}
 		}
 	}

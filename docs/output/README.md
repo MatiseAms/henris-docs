@@ -7,6 +7,8 @@ To get the [default settings](#default-settings) add the following code to your 
 ```scss
 @import '~henris/custom-output';
 $output: set-output(css,true);
+
+@import '~henris';
 ```
 
 ## All settings
@@ -14,6 +16,8 @@ If you want to use all Henris settings you can add the following code to your ma
 ```scss
 @import '~henris/custom-output';
 $output: set-output(full,true);
+
+@import '~henris';
 ```
 
 
@@ -23,6 +27,8 @@ You can use the same syntax to only add certain settings to your project, you ca
 ```scss
 @import '~henris/custom-output';
 $output: set-output(button,true);
+
+@import '~henris';
 ```
 
 ::: tip
