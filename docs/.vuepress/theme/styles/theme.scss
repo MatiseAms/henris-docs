@@ -7,7 +7,7 @@ $output: set-output(css, true);
 $output: set-output(reset-extra, true);
 $output: set-output(form-switch, true);
 
-@import "~henris";
+@import '~henris';
 
 
 @import './config';
@@ -30,6 +30,11 @@ body{
 	font-size: 16px;
 	background: transparent;
 	color: color(textColor);
+}
+
+.content table {
+	display: table;
+	width: 100%;
 }
 
 .page{

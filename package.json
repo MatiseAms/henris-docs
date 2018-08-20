@@ -23,7 +23,7 @@
 		"vuepress": "^0.11.0"
 	},
 	"dependencies": {
-		"henris": "^0.3.0",
+		"henris": "^0.3.3",
 		"node-sass": "^4.9.3",
 		"sass-loader": "^7.1.0"
 	}
