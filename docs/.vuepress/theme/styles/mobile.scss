@@ -1,7 +1,7 @@
 @import './config';
 
 // narrow desktop / iPad
-@media (max-width: $MQNarrow){
+@media #{$small-only}{
 	.sidebar{
 		font-size: 15px;
 		width: 100vw;
@@ -11,7 +11,7 @@
 	}
 }
 // wide mobile
-@media (max-width: $MQMobile){
+@media #{$small-only}{
 	.sidebar{
 		top: 0;
 		padding-top: $navbarHeight;
@@ -35,7 +35,7 @@
 	}
 }
 // narrow mobile
-@media (max-width: $MQMobileNarrow){
+@media #{$small-only}{
 	h1{
 		font-size: 1.9rem;
 	}

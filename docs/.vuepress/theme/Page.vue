@@ -205,7 +205,7 @@ function find (page, items, offset) {
 			float: right;
 		}
 	}
-	@media (max-width: $MQMobile){
+	@media #{$small-only}{
 		.page-edit{
 			.edit-link{
 				margin-bottom: .5rem;

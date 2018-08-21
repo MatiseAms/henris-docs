@@ -145,7 +145,7 @@ function resolveOpenGroupIndex (route, items) {
 		flex-direction: column;
 	}
 }
-@media (max-width: $MQMobile){
+@media #{$small-only}{
 	.sidebar{
 		.nav-links{
 			display: block;

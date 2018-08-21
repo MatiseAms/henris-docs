@@ -118,7 +118,7 @@ export default {
 		}
 	}
 }
-@media (max-width: $MQMobile){
+@media #{$small-only}{
 	.dropdown-wrapper{
 		&.open .dropdown-title{
 			margin-bottom: 0.5rem;

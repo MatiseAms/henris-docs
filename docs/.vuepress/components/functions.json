@@ -123,6 +123,54 @@
 					}
 				]
 			}
+		},
+		{
+			"category": {
+				"name": "Custom Properties",
+				"description": "Being lazy done right.",
+				"subfunctions": [
+					{
+						"name": "v()",
+						"return": "",
+						"description": "Shorthand for css variables.",
+						"syntax": "v(variablename);"
+					}
+				]
+			}
+		},
+		{
+			"category": {
+				"name": "Fonts",
+				"description": "",
+				"subfunctions": [
+					{
+						"name": "letter-spacing()",
+						"return": "",
+						"description": "Calculate the letter-spacing as it is used in photoshop.",
+						"syntax": "letter-spacing($font-size, $space);"
+					}
+				]
+			}
+		},
+		{
+			"category": {
+				"name": "Icons",
+				"description": "",
+				"subfunctions": [
+					{
+						"name": "icons()",
+						"return": "list",
+						"description": "Returns a list of all icons.",
+						"syntax": "icons();"
+					},
+					{
+						"name": "icon()",
+						"return": "",
+						"description": "Returns an icon by name.",
+						"syntax": "icon($icon-name);"
+					}
+				]
+			}
 		}
 	]
 }

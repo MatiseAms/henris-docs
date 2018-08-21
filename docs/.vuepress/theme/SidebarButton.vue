@@ -25,7 +25,7 @@
 		height: 1.25rem;
 	}
 }
-@media (max-width: $MQMobile){
+@media #{$small-only}{
 	.sidebar-button{
 		display: block;
 	}

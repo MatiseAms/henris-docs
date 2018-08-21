@@ -133,7 +133,7 @@ export default {
 		}
 	}
 }
-@media (max-width: $MQMobile){
+@media #{$small-only}{
 	.algolia-search-wrapper{
 		.ds-dropdown-menu{
 			min-width: calc(100vw - 4rem) !important;

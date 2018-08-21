@@ -1,3 +1,8 @@
+---
+home: true
+---
+
+
 ### Quick start
 ```bash
 # install

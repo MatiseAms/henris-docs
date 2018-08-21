@@ -122,7 +122,7 @@ export default {
 		margin-left: 1.5rem;
 	}
 }
-@media (max-width: $MQMobile){
+@media #{$small-only}{
 	.nav-links{
 		.nav-item, .repo-link{
 			margin-left: 0;
