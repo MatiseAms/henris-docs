@@ -1,10 +1,11 @@
 # Color
 
 ## The philosophy
+
 Henri's comes with two [predefined colorsets](#default-colorsets); `default` and `social`. All colors are easy to change, extend, or overwrite with another colorset. Normally colors are defined as variables in SCSS, we decided that a color function is much more powerful.
 
-
 ## The function
+
 The basic function to show a color is `color(Red)`, but in Henri's it's also possible to use it to define the opacity or use another colorset.
 
 ```scss
@@ -12,14 +13,23 @@ The basic function to show a color is `color(Red)`, but in Henri's it's also pos
 background-color: color(Red); // outputs: background-color: #eb0f33;
 
 // Using the opacity property:
-background-color: color(Red, 0.5); // outputs: background-color: rgba(235, 15, 51, 0.5);
+background-color: color(
+	Red,
+	0.5
+); // outputs: background-color: rgba(235, 15, 51, 0.5);
 
 // Using a different colorset:
-background-color: color(Red, 1, "vibrant"); // outputs: background-color: #fe5165;
+background-color: color(
+	Red,
+	1,
+	"vibrant"
+); // outputs: background-color: #fe5165;
 ```
 
 ## Add your own
+
 Add your own colorset by passing a map. Colors should not have the same name as existing [html color names](https://www.w3schools.com/colors/colors_names.asp), you can only use them if you capitalize them.
+
 ```scss
 // To create a new colorset and overwrite the default at the same time:
 $default-color-set: (
@@ -37,15 +47,16 @@ $custom-colors: (
 	"myBlue": #181160,
 	"fireRed": #ed1f35
 );
-
 ```
 
-
 ## Overwrite
+
 To overwrite the default colorset and add your own:
+
 ```scss
 $default-color-set: "vibrant";
 ```
+
 ::: tip
 Include this before the import of `@import '~henris'`
 :::
@@ -53,36 +64,29 @@ Include this before the import of `@import '~henris'`
 ## SCSS color function
 
 The colors from the colorsets are all usable in the standard [SCSS color functions](http://sass-lang.com/documentation/Sass/Script/Functions.html):
+
 ```scss
 // syntax:
 color: darken(colorName, $amount);
 
 // example
 color: darken(fireRed, 10%);
-
 ```
-
-::: warning
-Do **not** use HTML color names in SCSS functions.
-:::
 
 ## Default color variables
 
-| Variable | Default value | Use |
-| -- | -- | -- |
-| `$color-dark` | `color(Black)` | Mainly used for text colors and backgrounds |
-| `$color-light` | `color(White)` | Mainly used for text colors and backgrounds |
-| `$color-primary`/ `$primary-color` | `color(Purple)` | The main color in your project, f.e. your brand color |
-| `$color-secondary`/ `$secondary-color` | `color(Blue)` | The complementary color in your project |
-| `$color-tertiary`/ `$tertiary-color` | `color(Pink)` | An extra complementary color in your project |
-| `$color-link` | `color(Blue)` | Links |
-| `$color-info` | `color(Turquoise)` | Information blocks or texts |
-| `$color-success` | `color(Green)` | Success messages |
-| `$color-warning` | `color(Orange)` | Warning messages |
-| `$color-danger` | `color(Red)` | Danger / error messages |
-
-
-
+| Variable                               | Default value      | Use                                                   |
+| -------------------------------------- | ------------------ | ----------------------------------------------------- |
+| `$color-dark`                          | `color(Black)`     | Mainly used for text colors and backgrounds           |
+| `$color-light`                         | `color(White)`     | Mainly used for text colors and backgrounds           |
+| `$color-primary`/ `$primary-color`     | `color(Purple)`    | The main color in your project, f.e. your brand color |
+| `$color-secondary`/ `$secondary-color` | `color(Blue)`      | The complementary color in your project               |
+| `$color-tertiary`/ `$tertiary-color`   | `color(Pink)`      | An extra complementary color in your project          |
+| `$color-link`                          | `color(Blue)`      | Links                                                 |
+| `$color-info`                          | `color(Turquoise)` | Information blocks or texts                           |
+| `$color-success`                       | `color(Green)`     | Success messages                                      |
+| `$color-warning`                       | `color(Orange)`    | Warning messages                                      |
+| `$color-danger`                        | `color(Red)`       | Danger / error messages                               |
 
 ### Default colorsets
 
