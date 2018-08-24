@@ -13,15 +13,16 @@ Include or define up to 4 fonts.
 
 ## Settings
 
-| Property        | Default value                   | Example                           | Type    |
-| --------------- | ------------------------------- | --------------------------------- | ------- |
-| `font-family`\* | `null`                          | `"Graphik", sans-serif`           | string  |
-| `load`          | `false`                         | `true`                            | boolean |
-| `weights`       | `()`                            | `('light': 200, 'Regular': 400 )` | map     |
-| `path`          | `"/fonts"`                      | `"/assets/fonts"`                 | string  |
-| `files`         | `"woff2", "woff", "ttf", "eot"` |                                   | list    |
-| `use`           | `()`                            | `('h1','.title','blockquote')`    | list    |
-| `types`         | `('normal')`                    | `('normal','italic')`             | list    |
+| Property         | Default value                   | Example                           | Type    |
+| ---------------- | ------------------------------- | --------------------------------- | ------- |
+| `font-family`\*  | `null`                          | `"Graphik", sans-serif`           | string  |
+| `load`           | `false`                         | `true`                            | boolean |
+| `weights`        | `()`                            | `('light': 200, 'Regular': 400 )` | map     |
+| `weight-classes` | `false`                         | `true`                            | boolean |
+| `path`           | `"/fonts"`                      | `"/assets/fonts"`                 | string  |
+| `files`          | `"woff2", "woff", "ttf", "eot"` |                                   | list    |
+| `use`            | `()`                            | `('h1','.title','blockquote')`    | list    |
+| `types`          | `('normal')`                    | `('normal','italic')`             | list    |
 
 \* is required
 
