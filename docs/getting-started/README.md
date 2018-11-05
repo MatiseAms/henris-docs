@@ -9,6 +9,12 @@ You can simply add Henris as a package to your project.
 $ npm i henris # OR yarn global add henris
 ```
 
+## Using
+```scss
+# add to your project
+@import '~henris';
+```
+
 ## Running the tests
 Tests will check the main functionalities of the package. Install the package locally and run
 
