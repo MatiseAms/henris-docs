@@ -1,0 +1,46 @@
+.page {
+	background-color: color(White);
+	margin-top: 3.5rem;
+	padding-left: 20rem;
+	
+	& + .page{
+		margin-top: 0; 
+	}
+	
+	@media #{$medium-only}{
+		padding-left: 15rem;
+	}
+	@media #{$small-only}{
+		padding-left: 0rem;
+	}
+
+  &--content {
+    .content.default {
+      padding: grid(3);
+			@media #{$small-only}{
+				padding: 30px; 
+			}
+		}
+  }
+
+	&__nav {
+
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    &-link {
+      padding: 1rem;
+      font-size: 14px;
+      display: block;
+      background-color: color(Black);
+    }
+	}
+	&__nav,
+	&__footer{
+		background-color: color(Dark);
+		color: white;
+		p{
+			padding: 1rem; font-size: 12px; opacity: .5;
+		}
+	}
+}

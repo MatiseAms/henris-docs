@@ -1,0 +1,21 @@
+// Basics
+@import 'tools/pre';
+@import 'typography/embed';
+
+// Define output settings for project
+$output: set-output(css, true);
+$output: set-output(reset-extra, true);
+
+// Output the whole framework
+@import '~henris';
+@import 'tools/post';
+// Theme
+@import 'typography/index';
+@import 'components/index';
+
+html{
+  background-color: color(Dark);
+}
+body{
+  background-color: color(Black);
+}
