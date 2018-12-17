@@ -23,7 +23,18 @@ module.exports = {
 					'doc/grid', 
 					'doc/menu', 
 					'doc/settings', 
-					'doc/output'
+					'doc/output',
+					'doc/typography',
+					'doc/functions'
+        ]
+      },
+      {
+        title: 'Styled',
+        collapsable: false,
+        children: [
+					'doc/buttons', 
+					'doc/forms',
+					'doc/patterns'
         ]
       }
     ],

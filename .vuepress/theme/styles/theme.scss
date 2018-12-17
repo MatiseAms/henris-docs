@@ -5,6 +5,8 @@
 // Define output settings for project
 $output: set-output(css, true);
 $output: set-output(reset-extra, true);
+$output: set-output(form-switch, true);
+$output: set-output(pattern, true);
 
 // Output the whole framework
 @import '~henris';

@@ -6,7 +6,7 @@
       :to="$localePath"
       class="navbar__logo"
     >
-      <henris-logo color="black"></henris-logo>
+      <henris-logo color="white"></henris-logo>
       <span class="navbar__logo-text">
         {{ $siteTitle }}
       </span>
@@ -105,7 +105,7 @@ function css(el, property) {
   box-sizing: border-box;
 
   &__logo {
-    background-color: color(darkPurple);
+    background-color: color(Black);
     width: 20rem;
     @media #{$medium-only} {
       width: 15rem;

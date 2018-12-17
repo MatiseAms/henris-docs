@@ -77,7 +77,7 @@ export default {
 
 .page--home {
   .content.default {
-    padding: 30px;
+    padding: 30px !important;
   }
 }
 .home-header {

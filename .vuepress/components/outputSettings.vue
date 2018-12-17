@@ -23,6 +23,7 @@
         >
           <td>{{child.name}}</td>
           <td>{{child.value}}</td>
+          <td><div class="input-switch"><label></label><input type="checkbox" /></div></td>
         </tr>
       </tbody>
     </table>
@@ -108,9 +109,7 @@ export default {
 
 <style lang="scss">
 @import "~henris";
-// @import "../theme/styles/custom-colors";
-// @import "~henris";
-table {
+table { width: 100%;
   .parent {
     // color: color(accentColor);
     font-weight: bold;

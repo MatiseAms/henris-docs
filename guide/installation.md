@@ -16,21 +16,21 @@ Make sure you have installed `sass /or node-sass` and `sass-loader`
 
 Create the following structure:
 <file-tree>
-	<ul>
+	<ul class="dir__list">
 		<li class="dir">assets
-			<ul>
+			<ul class="dir__list">
 				<li class="dir">scss
-					<ul>
+					<ul classs="dir__list">
 						<li class="file" ext="scss">app</li>
 						<li class="dir">tools
-							<ul>
+							<ul class="dir__list">
 								<li class="file" ext="scss">_index</li>
 								<li class="file" ext="scss">_pre</li>
 								<li class="file" ext="scss">_post</li>
 							</ul>
 						</li>
 						<li class="dir">typography
-							<ul>
+							<ul class="dir__list">
 								<li class="file" ext="scss">_index</li>
 								<li class="file" ext="scss">_embed</li>
 								<li class="file" ext="scss">_spacing</li>

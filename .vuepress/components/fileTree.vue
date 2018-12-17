@@ -9,8 +9,10 @@
   border: 1px solid rgba(#a1a193, 0.25);
   font-size: 14px;
   ul {
+    display: block;
     padding-left: 0rem;
     li {
+      display: block; 
       padding: 0;
       margin: 0;
     }
