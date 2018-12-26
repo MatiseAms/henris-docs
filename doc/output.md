@@ -39,4 +39,6 @@ NB: You need to add the output settings to your css file **above** the Henris im
 Main settings are displayed as <b class="text--purple">bold and purple</b> and can switch the sub settings on or off at once.  
 F.e. if you want to use `button-default` you need to first set `button` to true.
 
+<output-settings />
+
 See [installation](/installation) for more information.

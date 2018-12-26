@@ -8,7 +8,7 @@ module.exports = {
 		sidebar: [
       {
         title: 'Guide',
-        collapsable: false,
+        collapsable: true,
         children: [
 					'guide/getting-started', 
 					'guide/installation', 
@@ -17,7 +17,7 @@ module.exports = {
       },
       {
         title: 'Documentation',
-        collapsable: false,
+        collapsable: true,
         children: [
 					'doc/color', 
 					'doc/grid', 
@@ -30,7 +30,7 @@ module.exports = {
       },
       {
         title: 'Styled',
-        collapsable: false,
+        collapsable: true,
         children: [
 					'doc/buttons', 
 					'doc/forms',

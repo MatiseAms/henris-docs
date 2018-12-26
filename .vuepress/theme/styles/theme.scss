@@ -19,5 +19,20 @@ html{
   background-color: color(Dark);
 }
 body{
-  background-color: color(Black);
+  background-color: color(Offwhite);
+}
+
+.column > .content{
+  padding: 1rem; 
+}
+
+.content-row{
+  width: calc(100% + 2rem); 
+  margin-left: -1rem;
+}
+
+.home{
+  &--intro{
+    height: 0; padding-bottom: 50%; 
+  }
 }

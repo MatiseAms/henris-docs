@@ -32,7 +32,7 @@ h2 {
 h3 {
 	font-weight: normal;
 	font-size: grid(0.5);
-	line-height: 1;
+	line-height: 1.5;
 	@include min-(font-size, 0.5, 14);
 	@include max-(font-size, 0.5, 48);
 }
@@ -41,8 +41,5 @@ h3 {
 h4 {
 	font-weight: normal;
 	font-size: 1.25rem;
-	opacity: .25;
 	line-height: 1;
-	// @include min-(font-size, 0.5, 12);
-	// @include max-(font-size, 0.5, 32);
 }

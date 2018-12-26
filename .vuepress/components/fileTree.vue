@@ -4,6 +4,9 @@
   </div>
 </template>
 <style lang="scss">
+ul:not([class]) li:before, ol:not([class]) li:before{
+  transform: none;
+}
 .file-tree {
   padding: 1rem;
   border: 1px solid rgba(#a1a193, 0.25);
@@ -15,6 +18,7 @@
       display: block; 
       padding: 0;
       margin: 0;
+      transform: none;
     }
   }
   ul,

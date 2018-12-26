@@ -6,7 +6,7 @@
       :to="$localePath"
       class="navbar__logo"
     >
-      <henris-logo color="white"></henris-logo>
+      <henris-logo color="black"></henris-logo>
       <span class="navbar__logo-text">
         {{ $siteTitle }}
       </span>
@@ -90,9 +90,11 @@ function css(el, property) {
 @import "../styles/tools/index";
 
 .navbar {
-  background-color: color(Offwhite);
+  background-color: color(White);
   color: color(Dark);
 
+
+border-bottom: 1px solid color(offWhite);
   display: flex;
   justify-content: space-between;
 
@@ -105,7 +107,7 @@ function css(el, property) {
   box-sizing: border-box;
 
   &__logo {
-    background-color: color(Black);
+    background-color: color(White);
     width: 20rem;
     @media #{$medium-only} {
       width: 15rem;
@@ -120,12 +122,12 @@ function css(el, property) {
     padding: 0 2rem;
     position: relative;
     svg {
-      opacity: 0.25;
+      // opacity: 0.25;
       position: absolute;
-      left: 50%;
+      left: 1rem;
       top: 50%;
-      transform: translate(-50%, -50%);
-      width: calc(100% - 2rem);
+      transform: translateY(-50%);
+      width: 50%;
     }
   }
   &__links{

@@ -91,12 +91,11 @@ function resolveOpenGroupIndex(route, items) {
 <style lang="scss">
 @import "../styles/tools/index";
 .sidebar {
-  
-  display: flex; 
+  display: flex;
   flex-direction: column;
   justify-content: space-between;
-  background-color: darken(darkPurple,10%);
-  
+  background-color: color(White);
+  border-right: 1px solid color(offWhite);
 
   font-size: 1rem;
   width: 20rem;
@@ -122,14 +121,20 @@ function resolveOpenGroupIndex(route, items) {
 
   &__list {
     width: 100%;
-    padding: 2rem;
+    padding: 2rem 0;
     display: block;
   }
   &__sub-list {
     display: block;
-    padding: 1rem;
+    // padding: 1rem;
     .sidebar__item {
+      & + .sidebar__item {
+        margin-top: 0rem;
+      }
+    }
+    .sidebar__link {
       font-size: 14px;
+      padding-left: 2.5rem;
     }
   }
   &__item {
@@ -140,14 +145,18 @@ function resolveOpenGroupIndex(route, items) {
     }
   }
   &__link {
-    color: color(White);
+    color: color(Dark);
+    display: block;
+    padding: 0.5rem 2rem;
     &.active {
       color: color(Blue);
     }
   }
   &__heading {
     font-weight: 500;
+    color: color(Blue);
 
+    padding: 0.5rem 2rem;
     & + .sidebar-group__list {
       width: 100%;
       margin-top: 1rem;
@@ -161,26 +170,30 @@ function resolveOpenGroupIndex(route, items) {
     }
     &__item {
       display: block;
-      padding: 0.5rem 1rem;
+      // padding: 0.5rem 1rem;
     }
   }
 
   .navbar {
-    &__list {align-self: flex-end;
+    &__list {
+      align-self: flex-end;
       white-space: pre-wrap;
-      background-color: color(Black);
+      background-color: color(White);
       display: block;
-      padding: 1rem; 
-      width: 100%; 
+      // padding: 1rem;
+      width: 100%;
+      transition: max-height 0.3s;
     }
     &__item {
-      margin: 0; padding: 0; 
-      color: white;
+      margin: 0;
+      padding: 0;
+      // color: color(Purple);
       display: block;
     }
-    &__link{
+    &__link {
       line-height: 1;
-      display: block; padding: .5rem 2rem; 
+      display: block;
+      padding: 0.5rem 2rem;
     }
   }
 }

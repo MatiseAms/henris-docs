@@ -4,6 +4,7 @@
 
 Henri's comes with two [predefined colorsets](#default-colorsets); `default` and `social`. All colors are easy to change, extend, or overwrite with another colorset. Normally colors are defined as variables in SCSS, we decided that a color function is much more powerful.
 
+
 ## The function
 
 The basic function to show a color is `color(Red)`, but in Henri's it's also possible to use it to define the opacity or use another colorset.
@@ -131,3 +132,9 @@ $color-social: (
 	"wordpress": #21759b
 ) !default; //
 ```
+
+
+## Default colorset
+
+These are the colors set by default in Henris. All colors can be easily overwritten as you can read above. 
+<color-palette />
