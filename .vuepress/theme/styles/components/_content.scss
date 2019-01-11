@@ -1,0 +1,30 @@
+a{
+	text-decoration: none;
+}
+
+.content{
+	a {
+		font-weight: 500;
+		color: $accentColor;
+		text-decoration: none;
+	}
+	p a code {
+		font-weight: 400;
+		color: $accentColor;
+	}
+	.code{
+		border: 1px solid red;
+	}
+}
+
+a.header-anchor {
+	font-size: 0.85em;
+	float: left;
+	margin-left: -0.87em;
+	padding-right: 0.23em;
+	margin-top: 0.125em;
+	opacity: 0;
+	&:hover {
+		text-decoration: none;
+	}
+}

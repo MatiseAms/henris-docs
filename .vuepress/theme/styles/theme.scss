@@ -1,0 +1,39 @@
+// Basics
+@import 'tools/pre';
+@import 'typography/embed';
+
+// Define output settings for project
+$output: set-output(css, true);
+$output: set-output(full, true);
+$output: set-output(reset-extra, true);
+$output: set-output(form-switch, true);
+$output: set-output(pattern, true);
+
+// Output the whole framework
+@import '~henris';
+@import 'tools/post';
+// Theme
+@import 'typography/index';
+@import 'components/index';
+
+html{
+  background-color: color(Dark);
+}
+body{
+  background-color: color(Offwhite);
+}
+
+.column > .content{
+  padding: 1rem; 
+}
+
+.content-row{
+  width: calc(100% + 2rem); 
+  margin-left: -1rem;
+}
+
+.home{
+  &--intro{
+    height: 0; padding-bottom: 50%; 
+  }
+}

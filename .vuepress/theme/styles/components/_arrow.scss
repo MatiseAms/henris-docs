@@ -1,0 +1,24 @@
+// @import './config';
+
+$color-arrow: $arrowBgColor;
+.arrow {
+	display: inline-block;
+	width: .4rem;
+	height: .4rem; 
+	border-right: 2px solid color(offWhite);
+	border-bottom: 2px solid  color(offWhite);
+	transform: translateY(-.25rem) rotate(-45deg);
+	transform-origin: 50% 50%;
+	transition: transform .3s ease-in-out;
+	&.up {
+		transform: rotate(45deg) translateY(-.25rem);
+	}
+	&.down {
+		transform:  translateY(-.25rem) rotate(45deg);
+	}
+	&.right {
+		transform: translateY(-.25rem) rotate(-45deg);
+	}
+	&.left {
+	}
+}

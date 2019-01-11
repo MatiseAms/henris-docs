@@ -1,31 +1,22 @@
 {
-	"name": "henris-docs",
-	"version": "0.2.8",
-	"description": "SCSS framework documentation - by Matise",
-	"main": "index.scss",
-	"directories": {
-		"test": "test"
-	},
-	"scripts": {
-		"docs:dev": "vuepress dev docs",
-		"docs:build": "vuepress build docs"
-	},
-	"keywords": [
-		"scss",
-		"framework",
-		"sass",
-		"grid",
-		"documentation"
-	],
-	"author": "Sil van Diepen",
-	"license": "MIT",
-	"devDependencies": {
-		"vuepress": "^0.11.0"
-	},
-	"dependencies": {
-		"henris": "^0.3.3",
-		"lottie-web": "^5.2.1",
-		"node-sass": "^4.9.3",
-		"sass-loader": "^7.1.0"
-	}
+  "name": "henris-docs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "vuepress": "^1.0.0-alpha.27"
+  },
+  "devDependencies": {
+    "henris": "^0.5.1",
+    "node-sass": "^4.11.0",
+    "sass-loader": "^7.1.0"
+  },
+  "scripts": {
+    "dev": "vuepress dev",
+    "build": "vuepress build"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
 }
