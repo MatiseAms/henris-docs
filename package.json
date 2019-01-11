@@ -8,7 +8,7 @@
     "vuepress": "^1.0.0-alpha.27"
   },
   "devDependencies": {
-    "henris": "^0.4.2",
+    "henris": "^0.5.1",
     "node-sass": "^4.11.0",
     "sass-loader": "^7.1.0"
   },

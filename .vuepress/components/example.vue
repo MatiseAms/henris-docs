@@ -15,7 +15,7 @@
   & + div[class^="language-"] {
     position: absolute;
     // opacity: 0;
-    transition: clip-path .3s ease-in-out; 
+    transition: clip-path 0.3s ease-in-out;
     clip-path: inset(0 0 100% 0);
     margin-top: 0;
     &:hover {
@@ -28,6 +28,7 @@
       border-top-right-radius: 0;
     }
   }
+  div[class^="language-"]:hover,
   &:hover + div[class^="language-"] {
     opacity: 1;
     clip-path: inset(0 0 0 0);
