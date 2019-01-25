@@ -2,7 +2,18 @@
 
 Henri's comes with a some default settings. These settings are used all through the framework.
 
+
+### Base settings
 <as-table file="https://raw.githubusercontent.com/MatiseAms/henris/develop/data/base.json" get="base" />
+
+### Form settings
+<as-table file="https://raw.githubusercontent.com/MatiseAms/henris/develop/data/forms.json" get="form" />
+
+### Grid settings
+<as-table file="https://raw.githubusercontent.com/MatiseAms/henris/develop/data/grid.json" get="grid" />
+
+### Button settings
+<as-table file="https://raw.githubusercontent.com/MatiseAms/henris/develop/data/button.json" get="button" />
 
 ## prefix
 
