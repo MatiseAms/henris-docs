@@ -15,7 +15,7 @@
 	
 	// Add the hamburger to the click
 	span{
-		@include menu(;
+		@include menu();
 		// Default arguments in this order: $width: 1.5rem, $height: rem(2), $gutter: rem(5), $color: white, $round: 0, $transition-duration: 0.3s
 	}
 
