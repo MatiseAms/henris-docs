@@ -49,3 +49,24 @@ export default{
 	}
 }
 </script>
+
+## Responsive classes
+
+Henri's offers a range of responsive media query classes which do what you expect them to do.
+
+### Hide classes
+
+- hide-for-large-up
+- hide-for-large-only
+- hide-for-medium-up
+- hide-for-medium-only 
+- hide-for-small
+
+### Show classes
+
+- show-for-small-only
+- show-for-medium-only
+- show-for-large-only
+
+
+Output by default is true. 
