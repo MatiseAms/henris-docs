@@ -55,12 +55,21 @@ export default{
 Henri's offers a range of responsive media query classes which do what you expect them to do.
 
 ### Hide classes
-
-- hide-for-large-up
-- hide-for-large-only
-- hide-for-medium-up
-- hide-for-medium-only 
-- hide-for-small
+| class | from -- to | 
+| --- | --- | 
+| `hide-for-xxlarge-up` | 1920 > 9999 |
+| `hide-for-xxlarge-only` | 1920 > 9999 |
+| `hide-for-xxlarge-down` | < 1920 |
+| `hide-for-xlarge-up` | 1280 > |
+| `hide-for-xlarge-only` | 1280 > 1920 |
+| `hide-for-xlarge-down` | < 1280 |
+| `hide-for-large-up` | 960 > |
+| `hide-for-large-only` | 960 > 1280 |
+| `hide-for-large-down` | < 1280  |
+| `hide-for-medium-up` | 750 >  |
+| `hide-for-medium-only` | 750 > 960 |  
+| `hide-for-medium-down` | < 960 |  
+| `hide-for-small`| > 750 |
 
 ### Show classes
 
